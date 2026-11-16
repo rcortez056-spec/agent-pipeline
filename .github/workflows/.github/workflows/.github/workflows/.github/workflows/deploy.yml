@@ -1,0 +1,17 @@
+name: Deployment Automation
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Deployment Simulation
+        run: |
+          echo "Preparing deployment..."
+          echo "Deployment completed successfully!"
